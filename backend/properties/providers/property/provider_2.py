@@ -8,5 +8,6 @@ load_dotenv()
 
 
 class PropertyProvider2(PropertyProviderBase):
-    BASE_URL: str = os.getenv("PROVIDER_2_BASE_URL")
-    API_KEY: str = os.getenv("PROVIDER_2_API_KEY")
+    NAME = "provider_2"
+    BASE_URL = os.getenv("PROVIDER_2_BASE_URL")
+    API_KEY = os.getenv("PROVIDER_2_API_KEY")
