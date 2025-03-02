@@ -13,10 +13,17 @@ class PropertyViewTests(TestCase):
         data = response.json()
         
         # Verify the response structure
-        self.assertIn('providers', data)
-        self.assertIn('Provider 1', data['providers'])
-        self.assertIn('Normalized Address', data['providers']['Provider 1'])
-
+        self.assertIn("normalized_address", data)
+        self.assertIn("square_footage", data)
+        self.assertIn("lot_size_acres", data)
+        self.assertIn("year_built", data)
+        self.assertIn("property_type", data)
+        self.assertIn("bedrooms", data)
+        self.assertIn("bathrooms", data)
+        self.assertIn("room_count", data)
+        self.assertIn("septic_system", data)
+        self.assertIn("sale_price", data)
+    
     def test_properties_endpoint_without_address(self):
         # Call the endpoint without query parameters
         response = self.client.get(reverse('property_view'))
