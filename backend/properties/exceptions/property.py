@@ -6,6 +6,7 @@ class PropertyException(Exception):
         Address_Required = ("Address is required", 400)
         Unauthorized = ("Unauthorized", 401)
         Unknown_Error = ("Unknown Error", 500)
+        Missing_Settings = ("Missing settings", 400)
 
     def __init__(self, error_code):
         self.message, self.status_code = error_code

@@ -9,6 +9,7 @@ class PropertyExceptionsTests(TestCase):
         (PropertyException.ErrorCode.Address_Required, 400),
         (PropertyException.ErrorCode.Unauthorized, 401),
         (PropertyException.ErrorCode.Unknown_Error, 500),
+        (PropertyException.ErrorCode.Missing_Settings, 400),
         # Add more exceptions if needed
     ])
     def test_error_code_statuses(self, error_code, expected_status_code):
