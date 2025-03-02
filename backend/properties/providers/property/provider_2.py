@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 
-from properties.providers.base import PropertyProviderBase
+from properties.providers.property.base import PropertyProviderBase
 
 load_dotenv()
 
